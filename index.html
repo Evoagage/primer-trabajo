@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto dieta</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <a class="menuOpciones" href="index.html">Inicio</a>
+            <a class="menuOpciones" href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="tituloBarra">
+            <div class="Introduccion">
+                <h1 class="titulo">
+                    Mejora tu vida <strong class="resaltadoTitulo">con una buena dieta</strong>
+                </h1>
+                <p>Una alimentación balanceada es clave para mantenernos saludables, con energía y prevenir enfermedades. No se trata solo de contar calorías, sino de darle al cuerpo los nutrientes que necesita.
+
+                    Esta plataforma te ayudará a mejorar tus hábitos alimenticios con herramientas prácticas e información confiable, para que alcances tus metas de salud y bienestar.
+                </p>
+            </div>
+            <section class="progreso">
+                <div class="indicador">
+                    <span class="label">
+                        Calorías <span id="cQueVan">0</span>/<span id="cElegidas">0</span>
+                    </span>
+                    <div class="barraContenedor">
+                        <div class="barra" id="barraCalorias"></div>
+                    </div>
+                </div>
+                <div class="indicador">
+                    <span class="label">
+                        Proteínas <span id="pQueVan">0</span>/<span id="pElegidas">0</span>
+                    </span>
+                    <div class="barraContenedor">
+                        <div class="barra" id="barraProteinas"></div>
+                    </div>
+                </div>
+                <div class="indicador">
+                    <span class="label">
+                        Grasas <span id="gQueVan">0</span>/<span id="gElegidas">0</span>
+                    </span>
+                    <div class="barraContenedor">
+                        <div class="barra" id="barraGrasas"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="desplegables">
+            <h2 class="h2">Elija a continuación el elemento que desea agregar</h2>
+            <div class="botones">
+                <button class="boton" onclick="mostrarSeccionDesayuno()">Desayuno +</button>
+                <div class="comidaDist" id="desayuno" style="display: none;">
+                    <button class="alimentos" onclick="agregarAlimento(200, 12, 10)">Huevos (200 cal, 12g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(150, 5, 3)">Cereal con leche (150 cal, 5g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(200, 12, 10)">Huevos (200 cal, 12g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(150, 4, 5)">Hot Cakes (150 cal, 4g prot, 5g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(180, 6, 3)">Cereal con leche (180 cal, 6g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(100, 8, 1)">Yogur natural (100 cal, 8g prot, 1g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(250, 10, 15)">Pan con mantequilla (250 cal, 10g prot, 15g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(90, 2, 2)">Fruta (90 cal, 2g prot, 2g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(120, 5, 6)">Avena cocida (120 cal, 5g prot, 6g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(210, 7, 12)">Molletes (210 cal, 7g prot, 12g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(300, 20, 8)">Enchiladas (300 cal, 20g prot, 8g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(130, 3, 2)">Jugo de naranja (130 cal, 3g prot, 2g grasas)</button>
+                </div>
+                <button class="boton" onclick="mostrarSeccionComida()">Comida +</button>
+                <div class="comidaDist" id="comida" style="display: none;">
+                    <button class="alimentos" onclick="agregarAlimento(200, 12, 10)">Huevos (200 cal, 12g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(150, 5, 3)">Cereal con leche (150 cal, 5g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(300, 25, 15)">Pollo a la plancha (300 cal, 25g prot, 15g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(400, 30, 20)">Carne asada (400 cal, 30g prot, 20g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(250, 8, 5)">Arroz blanco (250 cal, 8g prot, 5g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(200, 6, 2)">Frijoles (200 cal, 6g prot, 2g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(350, 10, 12)">Ensalada con aderezo (350 cal, 10g prot, 12g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(180, 5, 3)">Tortillas de maíz (180 cal, 5g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(450, 22, 25)">Pasta con crema (450 cal, 22g prot, 25g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(100, 2, 0)">Vegetales cocidos (100 cal, 2g prot, 0g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(280, 18, 10)">Pescado empanizado (280 cal, 18g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(120, 3, 4)">Agua de frutas (120 cal, 3g prot, 4g grasas)</button>
+
+                </div>
+                <button class="boton" onclick="mostrarSeccionCena()">Cena +</button>
+                <div class="comidaDist" id="cena" style="display: none;">
+                    <button class="alimentos" onclick="agregarAlimento(200, 12, 10)">Huevos (200 cal, 12g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(150, 5, 3)">Cereal con leche (150 cal, 5g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(220, 14, 8)">Atún con galletas saladas (220 cal, 14g prot, 8g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(180, 12, 5)">Sopa de verduras (180 cal, 12g prot, 5g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(250, 10, 9)">Tostadas de pollo (250 cal, 10g prot, 9g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(300, 20, 12)">Quesadillas (300 cal, 20g prot, 12g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(150, 6, 3)">Pan integral con aguacate (150 cal, 6g prot, 3g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(130, 9, 2)">Claras de huevo (130 cal, 9g prot, 2g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(160, 4, 5)">Leche descremada (160 cal, 4g prot, 5g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(210, 11, 10)">Sándwich de jamón (210 cal, 11g prot, 10g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(90, 2, 1)">Gelatina ligera (90 cal, 2g prot, 1g grasas)</button>
+                    <button class="alimentos" onclick="agregarAlimento(120, 3, 2)">Infusión con miel (120 cal, 3g prot, 2g grasas)</button>
+
+                </div>
+
+            </div>
+            <img class="fotoPlato" src="imagenes/Fondocafe.jpg" alt="Plato saludable">
+        </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

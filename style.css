@@ -1,0 +1,181 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --colorPrimario:#2E8B57;
+    --colorTexto1: #1C1C1C;
+}
+body{
+    background-image: url(imagenes/plato.jpg);
+}
+.header {
+    background-color:var(--colorPrimario);
+    color: white;
+    padding: 1% 0% 1% 15%;
+}
+.menu{
+    display: flex;
+    align-items:center;
+    gap: 80px;
+}
+.menuOpciones{
+    text-decoration: none;
+    color: var(--colorTexto1);
+    font-size: 24px;
+    font-weight: 600;
+}
+.menuOpciones:hover{
+    color: #3CB371;
+    text-decoration: underline;
+}
+
+.main {
+
+    font-family: Arial, sans-serif; 
+    margin: 0px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.tituloBarra{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.introduccion{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    padding: 2% 2% 2% 2%;
+    font-size: 30px;
+    color: var(--colorTexto1);
+    justify-content: center;
+    text-align: center;
+}
+
+.resaltadoTitulo{
+    color: #3CB371;
+}
+
+p{
+    text-align: center;
+    color: var(--colorTexto1);
+}
+
+.progreso{
+    width: 2000px;
+    padding: 2% 2% 2% 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.indicador{
+    margin: 10x 0;
+
+}
+
+.label{
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+    color: var(--colorTexto1);
+}
+
+.barraContenedor{
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barra{
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+    background-color: #FF6B6B;
+    border-radius: 10px;
+}
+
+.desplegables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url(imagenes/fondoMadera.jpg);
+    color: var(--colorTexto1);
+    padding: 10px;
+    padding-bottom: 30px;
+}
+.h2{
+    color: #ddd;
+    text-shadow: black;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorTexto1);
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+}
+.boton{
+    background-color: #3CB371;
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.comidaDist{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: var(--colorTexto1);
+}
+
+.alimentos{
+    background-color: yellowgreen;
+    border-radius: 10px;
+    border-color: var(--colorPrimario);
+    color: var(--colorTexto1);
+    padding: 5px;
+}
+
+.boton:hover{
+    background-color: #0bd43e;
+}
+
+.alimentos:hover{
+    background-color: yellow;
+}
+
+.fotoPlato{
+    width: 50%;
+    height: 50%;
+    padding-top: 10px;
+}
+
+.footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:var(--colorTexto1);
+ }
